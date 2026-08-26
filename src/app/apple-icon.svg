@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient: Deep Night Navy with Blueprint tone -->
+    <linearGradient id="marsakBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060e1a"/>
+      <stop offset="50%" stop-color="#0b1c30"/>
+      <stop offset="100%" stop-color="#040a12"/>
+    </linearGradient>
+
+    <!-- Glowing Cyber Cyan / Aqua Stream -->
+    <linearGradient id="marsakAqua" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <!-- Radiant Copper Gold / Precision Brass -->
+    <linearGradient id="marsakCopper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="40%" stop-color="#f97316"/>
+      <stop offset="75%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#9a3412"/>
+    </linearGradient>
+
+    <!-- Chrome / Titanium Pipe Finish -->
+    <linearGradient id="marsakChrome" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#f1f5f9"/>
+      <stop offset="80%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+
+    <!-- Outer Metallic Border -->
+    <linearGradient id="marsakBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+
+    <!-- Soft Ambient Glow Filter -->
+    <filter id="marsakGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+    
+    <filter id="aquaNeon" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#38bdf8" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Hexagonal Shield Container -->
+  <rect width="512" height="512" rx="120" fill="url(#marsakBg)"/>
+  
+  <!-- Blueprint Technical Sub-Grid Inset -->
+  <path d="M64 128 h384 M64 256 h384 M64 384 h384 M128 64 v384 M256 64 v384 M384 64 v384" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.08" stroke-dasharray="4 8"/>
+  
+  <!-- Outer Metallic Border -->
+  <rect x="16" y="16" width="480" height="480" rx="106" fill="none" stroke="url(#marsakBorder)" stroke-width="6" stroke-opacity="0.6"/>
+
+  <!-- Center Emblem Graphic -->
+  <g filter="url(#marsakGlow)">
+    <!-- 1. Central Tech Water Droplet (Upper Apex) -->
+    <g filter="url(#aquaNeon)">
+      <path d="M256 68 C256 68, 316 148, 316 198 C316 231, 289 258, 256 258 C223 258, 196 231, 196 198 C196 148, 256 68, 256 68 Z" fill="url(#marsakAqua)"/>
+      <ellipse cx="238" cy="186" rx="10" ry="20" transform="rotate(-30 238 186)" fill="#ffffff" opacity="0.55"/>
+      <!-- Internal ultrasonic soundwave / diagnostic pulse in droplet -->
+      <circle cx="256" cy="198" r="16" fill="none" stroke="#ffffff" stroke-width="3" stroke-opacity="0.6"/>
+      <circle cx="256" cy="198" r="6" fill="#ffffff" opacity="0.9"/>
+    </g>
+
+    <!-- 2. The Powerful 'M' Architectural Pipe Structure -->
+    <!-- Left Vertical Pipe Pillar (Titanium / Chrome with pipe connector joints) -->
+    <rect x="96" y="180" width="56" height="236" rx="24" fill="url(#marsakChrome)"/>
+    <rect x="90" y="210" width="68" height="14" rx="7" fill="url(#marsakAqua)" opacity="0.9"/>
+    <rect x="90" y="370" width="68" height="14" rx="7" fill="url(#marsakAqua)" opacity="0.9"/>
+
+    <!-- Right Vertical Pipe Pillar (Radiant Copper with brass connector joints) -->
+    <rect x="360" y="180" width="56" height="236" rx="24" fill="url(#marsakCopper)"/>
+    <rect x="354" y="210" width="68" height="14" rx="7" fill="#fbbf24" opacity="0.9"/>
+    <rect x="354" y="370" width="68" height="14" rx="7" fill="#fbbf24" opacity="0.9"/>
+
+    <!-- Left Diagonal Arm (Water Stream Flow - Stainless & Cyan) -->
+    <path d="M136 198 L256 342 L216 376 L96 232 Z" fill="url(#marsakChrome)"/>
+
+    <!-- Right Diagonal Arm (Copper Pipe Fitting - Premium Amber/Copper) -->
+    <path d="M376 198 L256 342 L296 376 L416 232 Z" fill="url(#marsakCopper)"/>
+
+    <!-- 3. Central Pressure Valve / Flow Junction Hub -->
+    <circle cx="256" cy="342" r="38" fill="#060e1a" stroke="url(#marsakCopper)" stroke-width="12"/>
+    <circle cx="256" cy="342" r="22" fill="url(#marsakAqua)"/>
+    <circle cx="256" cy="342" r="10" fill="#ffffff" opacity="0.85"/>
+    
+    <!-- 4 Valve Screws / Rivets -->
+    <circle cx="256" cy="310" r="3.5" fill="#fde047"/>
+    <circle cx="256" cy="374" r="3.5" fill="#fde047"/>
+    <circle cx="224" cy="342" r="3.5" fill="#fde047"/>
+    <circle cx="288" cy="342" r="3.5" fill="#fde047"/>
+  </g>
+</svg>

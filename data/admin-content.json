@@ -1,0 +1,107 @@
+{
+  "site": {
+    "name": "Marsak Teknik Tesisat",
+    "shortName": "MARSAK",
+    "tagline": "TEKNİK TESİSAT",
+    "description": "İstanbul genelinde tüm ilçe ve mahallelere 7/24 profesyonel su tesisatı, kırmadan su kaçağı tespiti, robotla tıkanıklık açma ve kameralı gider görüntüleme hizmetleri.",
+    "phoneDisplay": "0536 463 82 84",
+    "phoneRaw": "+905364638284",
+    "whatsappRaw": "905364638284",
+    "whatsappMessage": "Merhaba, tesisat konusunda bilgi almak istiyorum.",
+    "email": "musayilmaz581907@gmail.com",
+    "hoursLabel": "7/24 Acil Servis",
+    "serviceArea": "İstanbul Geneli — Tüm İlçelere 7/24 Kesintisiz Hizmet"
+  },
+  "heroSlides": [
+    {
+      "image": "/images/hero/kacak-tespiti.png",
+      "alt": "Termal kamerayla duvarda su kaçağı arayan tesisat ustası",
+      "eyebrow": "Cihazla Noktasal Tespit",
+      "title": "Su Kaçağını Kırmadan Tespit Edelim",
+      "body": "Termal kamera ve akustik dinleme cihazlarıyla kaçağın kaynağını daraltıyor, gereksiz kırma işlemlerinin önüne geçmeye odaklanıyoruz.",
+      "href": "/hizmetler/kirmadan-su-kacagi-tespiti/",
+      "cta": "Kaçak Tespiti Hizmeti"
+    },
+    {
+      "image": "/images/hero/robotla-tikaniklik.png",
+      "alt": "Robot spiral cihazıyla gider tıkanıklığı açan tesisat ustası",
+      "eyebrow": "Profesyonel Cihazlarla Müdahale",
+      "title": "Zorlu Tıkanıklıkları Robotla Açalım",
+      "body": "Lavabo, tuvalet ve ana gider hatlarındaki tıkanıklıklara uygun başlık ve profesyonel spiral cihazıyla müdahale ediyoruz.",
+      "href": "/hizmetler/robotla-tikaniklik-acma/",
+      "cta": "Tıkanıklık Açma Hizmeti"
+    },
+    {
+      "image": "/images/hero/tesisat-onarimi.png",
+      "alt": "Mutfak evyesi altında tesisat bağlantısını onaran tesisat ustası",
+      "eyebrow": "Temiz ve Kontrollü İşçilik",
+      "title": "Tesisat Sorununu Doğru Noktada Çözelim",
+      "body": "Arızalı bağlantı ve hatları kontrol ediyor, gerekli onarımı uyguladıktan sonra sistemi yeniden test ederek teslim ediyoruz.",
+      "href": "/hizmetler/su-tesisati-tamiri/",
+      "cta": "Tesisat Tamiri Hizmeti"
+    }
+  ],
+  "homeSections": {
+    "trust": true,
+    "services": true,
+    "whyMarsak": true,
+    "process": true,
+    "equipment": true,
+    "serviceAreas": false,
+    "cases": false,
+    "pricing": true,
+    "reviews": false,
+    "faq": false,
+    "contact": true
+  },
+  "trustItems": [
+    "7/24 Acil Servis",
+    "Cihazla Kaçak Tespiti",
+    "Kırmadan Müdahale Yaklaşımı",
+    "Profesyonel Ekipman",
+    "İstanbul Geneli 7/24 Servis",
+    "Kameralı Gider Kontrolü",
+    "İşlem Öncesi Bilgilendirme"
+  ],
+  "faqItems": [
+    {
+      "q": "Göktürk'te tesisatçı ne kadar sürede gelir?",
+      "a": "Ulaşım süresi konuma, trafiğe ve o andaki iş yoğunluğuna göre değişir. Sabit bir süre taahhüdü vermek yerine, aradığınızda o an için gerçekçi bir tahmini varış süresi paylaşıyoruz."
+    },
+    {
+      "q": "Su kaçağı kırmadan bulunabilir mi?",
+      "a": "Kaçağın tespiti çoğu durumda kırım yapılmadan, cihaz desteğiyle gerçekleştirilebilir. Onarım aşamasında ise boruya ulaşmak için belirlenen noktada sınırlı bir açma işlemi gerekebilir. Amaç, açılan alanı olabildiğince küçük tutmaktır."
+    },
+    {
+      "q": "Termal kamera bütün kaçakları tespit eder mi?",
+      "a": "Hayır. Termal kamera sıcaklık farkını görüntüler ve özellikle sıcak su ile ısıtma hatlarında etkilidir. Soğuk su hatlarında veya derin gömülü tesisatlarda tek başına yeterli olmayabilir; bu durumlarda akustik dinleme, basınç testi ve nem ölçümü birlikte kullanılır."
+    },
+    {
+      "q": "Tıkanıklık açılırken boruya zarar gelir mi?",
+      "a": "Doğru cihaz ve uygun çalışma şekliyle risk azaltılır. Ancak boru zaten çatlamış ya da ileri derecede yıpranmışsa mevcut hasar işlem sırasında belirgin hale gelebilir. Şüpheli durumlarda önce kameralı görüntüleme öneriyoruz."
+    },
+    {
+      "q": "Kameralı gider görüntüleme neden yapılır?",
+      "a": "Tıkanıklığın veya kokunun kaynağını tahmin etmek yerine görmek için yapılır. Özellikle tekrarlayan sorunlarda hatta yapısal bir problem olup olmadığını anlamanın en doğrudan yoludur."
+    },
+    {
+      "q": "Su kaçağı tespitinden sonra onarım yapılıyor mu?",
+      "a": "Evet. Tespit sonrası onarım, boru yenileme ve hattın yeniden kontrol edilmesi işlemleri tarafımızdan yapılabilir. Onarımın kapsamı kaçağın konumuna ve borunun durumuna göre belirlenir."
+    },
+    {
+      "q": "Gece tesisat hizmeti veriliyor mu?",
+      "a": "Acil durumlar için mesai saatleri dışında da ulaşabilirsiniz. Müdahale imkânı, o andaki iş yoğunluğuna ve arızanın türüne göre değerlendirilir."
+    },
+    {
+      "q": "Tesisatçı fiyatları nasıl belirleniyor?",
+      "a": "Ücret; arızanın türüne, problemin bulunduğu noktaya, kullanılan cihaza, işçilik süresine ve gereken malzemeye göre belirlenir. Bu nedenle görmeden sabit fiyat vermiyoruz. Sorunu telefonda anlattığınızda kapsam hakkında bilgi verebiliriz."
+    }
+  ],
+  "seo": {
+    "homeTitle": "Marsak Teknik Tesisat | İstanbul 7/24 Su Tesisatçısı",
+    "homeDescription": "İstanbul genelinde tüm ilçe ve mahallelere su kaçağı tespiti, kırmadan kaçak tespiti, robotla tıkanıklık açma ve kameralı gider görüntüleme. 7/24 acil tesisat hizmeti.",
+    "canonicalUrl": "https://www.marsakteknik.com",
+    "indexSite": true
+  },
+  "updatedAt": "2026-08-25T12:17:11.354Z"
+}

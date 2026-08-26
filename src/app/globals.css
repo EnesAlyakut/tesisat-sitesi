@@ -1,0 +1,335 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   MARSAK TEKNIK TESISAT — TASARIM SISTEMI (AYDINLIK TEMA)
+   --------------------------------------------------------------------------
+   Yaklasim: teknik cizim / mimari proje estetigi, kagit uzerinde.
+   Acik ve ferah zeminler, derin lacivert tipografi, su mavisi ve bakir vurgu.
+   Koyu lacivert bloklar yalnizca ritim olusturmak icin (CTA, footer) kullanilir.
+   ========================================================================== */
+
+@theme {
+  /* --- Zeminler: kagit tonlari ------------------------------------------ */
+  /* --- Zeminler: temiz ve ferah tonlar ---------------------------------- */
+  --color-canvas-50: #ffffff;   /* kartlar */
+  --color-canvas-100: #f8fafc;  /* sayfa zemini: ferah ve aydınlık */
+  --color-canvas-200: #f1f5f9;  /* alternatif bölüm */
+  --color-canvas-300: #e2e8f0;  /* daha derin alan */
+  --color-canvas-400: #cbd5e1;  /* çizgi / kenar */
+
+  /* --- Derin kontrast: net ve yüksek okunabilirlik ---------------------- */
+  --color-ink: #0f172a;         /* birincil metin ve başlıklar: net derin lacivert */
+  --color-ink-soft: #334155;    /* gövde metni: yüksek kontrastlı net slate */
+  --color-ink-mute: #475569;    /* ikincil metin: okunabilir koyu ton */
+  --color-navy-900: #0a1725;    /* koyu blok zemini */
+  --color-navy-800: #0f2238;
+  --color-navy-700: #183350;
+  --color-navy-600: #24425f;
+
+  /* --- Su: kontrollü mavi ---------------------------------------------- */
+  --color-aqua-50: #eff7fe;
+  --color-aqua-100: #dbedfc;
+  --color-aqua-200: #b9dcf9;
+  --color-aqua-300: #86c3f2;
+  --color-aqua-400: #38bdf8;
+  --color-aqua-500: #0284c7;
+  --color-aqua-600: #0369a1;
+  --color-aqua-700: #075985;
+
+  /* --- Kahverengi: kurumsal sıcak tonlar (Butonlar & Vurgular) ---------- */
+  --color-copper-100: #f5ebe6;  /* açık bej / kemik */
+  --color-copper-200: #e8d5c8;
+  --color-copper-300: #c99a7a;  /* açık sıcak kahve */
+  --color-copper-400: #9e5b32;  /* orta sütlü kahve */
+  --color-copper-500: #783e18;  /* ana kahverengi */
+  --color-copper-600: #5c2d0c;  /* koyu çikolata / deri kahvesi */
+  --color-copper-700: #3d1c05;  /* derin espresso kahve */
+
+  /* --- Durum ------------------------------------------------------------ */
+  --color-alert-400: #ea6a34;
+  --color-alert-500: #d4501c;
+  --color-alert-600: #b23f13;
+  --color-ok-500: #16a34a;
+  --color-ok-600: #15803d;
+
+  /* --- Çizgiler: net ve belirgin ---------------------------------------- */
+  --color-line: #cbd5e1;        /* standart kenar */
+  --color-line-strong: #94a3b8; /* belirgin kenar */
+  --color-line-soft: #e2e8f0;   /* iç ayırıcı çizgi */
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+
+  /* --- Golgeler: yumusak ve katmanli ------------------------------------ */
+  --shadow-soft: 0 1px 2px rgba(11, 23, 38, 0.06),
+    0 6px 18px rgba(11, 23, 38, 0.07);
+  --shadow-lift: 0 2px 6px rgba(11, 23, 38, 0.08),
+    0 16px 40px rgba(11, 23, 38, 0.12);
+  --shadow-deep: 0 28px 70px rgba(11, 23, 38, 0.18);
+}
+
+/* ------------------------------------------------------------------ temel */
+
+@layer base {
+  :root {
+    --header-h: 4.5rem;
+    --mobilebar-h: calc(4rem + env(safe-area-inset-bottom, 0px));
+    color-scheme: light;
+  }
+
+  * {
+    min-width: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-h) + 1rem);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-canvas-100);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* Yatay tasma kesinlikle olusmamali */
+    overflow-x: clip;
+  }
+
+  /* Mobil alt cubugun icerigi kapatmamasi icin */
+  @media (max-width: 1023px) {
+    body {
+      padding-bottom: var(--mobilebar-h);
+    }
+  }
+
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+    letter-spacing: -0.022em;
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-aqua-600);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-aqua-200);
+    color: var(--color-navy-900);
+  }
+
+  img, svg, video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ------------------------------------------------------- yardimci siniflar */
+
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-x { padding-inline: 2rem; }
+  }
+
+  /* Blueprint dokusu — acik zeminde ince teknik izgara */
+  .blueprint-grid {
+    background-image:
+      linear-gradient(to right, rgba(20, 106, 174, 0.075) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(20, 106, 174, 0.075) 1px, transparent 1px);
+    background-size: 46px 46px;
+  }
+  .blueprint-grid-fine {
+    background-image:
+      linear-gradient(to right, rgba(20, 106, 174, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(20, 106, 174, 0.05) 1px, transparent 1px);
+    background-size: 11px 11px;
+  }
+
+  /* Koyu bloklarda izgara — footer ve CTA icin */
+  .blueprint-grid-dark {
+    background-image:
+      linear-gradient(to right, rgba(134, 195, 242, 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(134, 195, 242, 0.07) 1px, transparent 1px);
+    background-size: 46px 46px;
+  }
+
+  /* Bolum ust etiketi */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-copper-700);
+  }
+  .eyebrow-on-dark {
+    color: var(--color-copper-300);
+  }
+
+  /* Kart — beyaz zemin, ince kenar, yumusak golge */
+  .card {
+    background: var(--color-canvas-50);
+    border: 1px solid var(--color-line);
+    border-radius: 1.5rem;
+    /* Ust kenardaki ince acik cizgi kagit hissini guclendirir */
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      var(--shadow-soft);
+    transition:
+      box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.35s ease,
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .card-hover:hover {
+    border-color: var(--color-aqua-400);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      var(--shadow-lift);
+    transform: translateY(-3px);
+  }
+
+  /* Etiket / chip — mahalle ve ozellik rozetleri */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-line-strong);
+    background: var(--color-canvas-50);
+    padding: 0.5rem 0.9rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--color-ink-soft);
+    box-shadow: 0 1px 2px rgba(11, 23, 38, 0.04);
+  }
+
+  /* Cam efekti — yalnizca header */
+  .glass {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(16px) saturate(180%);
+  }
+
+  /* Butonun icinden su gecisi — hover mikro animasyonu */
+  .btn-flow {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-flow::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      100deg,
+      transparent 22%,
+      rgba(255, 255, 255, 0.32) 46%,
+      transparent 72%
+    );
+    transform: translateX(-120%);
+    transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .btn-flow:hover::after,
+  .btn-flow:focus-visible::after {
+    transform: translateX(120%);
+  }
+}
+
+/* --------------------------------------------------- scroll ile beliren ogeler */
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal[data-shown="true"] {
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+  }
+
+  .flow-dash {
+    stroke-dasharray: 6 14;
+    animation: flow-move 1.4s linear infinite;
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { scrollbar-width: none; }
+}
+
+@keyframes flow-move {
+  to { stroke-dashoffset: -20; }
+}
+
+@keyframes marquee-x {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes drip {
+  0%   { transform: translateY(0) scale(0.6); opacity: 0; }
+  25%  { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(14px) scale(0.75); opacity: 0; }
+}
+
+/* Kart ici boru animasyonu — hover/odakta borudan su gecer. */
+.pipe-flow {
+  opacity: 0;
+  stroke-dasharray: 6 14;
+  transition: opacity 0.3s ease;
+}
+.group:hover .pipe-flow,
+.group:focus-visible .pipe-flow,
+.group:focus-within .pipe-flow {
+  opacity: 1;
+  animation: flow-move 1.4s linear infinite;
+}
+
+/* -------------------------------------------------- azaltilmis hareket destegi
+   Animasyon kapatildiginda icerik KAYBOLMAZ; yalnizca hareket durur. */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .card-hover:hover {
+    transform: none;
+  }
+}
+
+
+/* Bolum ayiricisi — sayfa akisinda ritim olusturur */
+.section-rule {
+  border-top: 1px solid var(--color-line);
+}
