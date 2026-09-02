@@ -25,7 +25,23 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
-  alternates: { canonical: absoluteUrl("/") },
+  authors: [{ name: site.name, url: absoluteUrl("/") }],
+  creator: site.name,
+  publisher: site.name,
+  category: "Su tesisatı ve teknik servis",
+  referrer: "origin-when-cross-origin",
+  keywords: [
+    "İstanbul tesisatçı",
+    "su kaçağı tespiti",
+    "kırmadan su kaçağı bulma",
+    "robotla tıkanıklık açma",
+    "kameralı gider görüntüleme",
+    "7/24 acil tesisatçı",
+  ],
+  alternates: {
+    canonical: absoluteUrl("/"),
+    languages: { "tr-TR": absoluteUrl("/") },
+  },
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
@@ -44,14 +60,11 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: site.name,
     description: site.description,
-    images: [
-      {
-        url: "/logo.png",
-        width: 512,
-        height: 512,
-        alt: site.name,
-      },
-    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} | İstanbul 7/24 Su Tesisatçısı`,
+    description: site.description,
   },
   formatDetection: { telephone: true, address: false, email: false },
   ...(site.analytics.googleSiteVerification
@@ -61,7 +74,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: "#071322",
-  colorScheme: "dark",
+  colorScheme: "light",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",

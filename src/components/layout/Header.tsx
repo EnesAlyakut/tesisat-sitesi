@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { mainNav } from "@/lib/nav";
 import { useRuntimeSite } from "@/components/providers/RuntimeSiteContext";
-import { PhoneButton } from "@/components/ui/CallToAction";
+import { PhoneButton, WhatsAppButton } from "@/components/ui/CallToAction";
 
 export default function Header() {
   const site = useRuntimeSite();
@@ -105,7 +105,9 @@ export default function Header() {
 
           {/* Aksiyon Butonu & Mobil Menü Butonu */}
           <div className="flex items-center gap-3">
-            <PhoneButton size="sm" label="7/24 Hemen Ara" className="hidden sm:inline-flex" />
+            <div className="hidden sm:block">
+              <PhoneButton size="sm" label="7/24 Hemen Ara" />
+            </div>
 
             <button
               type="button"
@@ -142,7 +144,8 @@ export default function Header() {
         id="mobil-menu"
         ref={panelRef}
         hidden={!open}
-        className="fixed inset-x-0 bottom-0 top-20 z-40 overflow-y-auto border-t border-white/10 bg-[#071322] text-white lg:hidden"
+        className="fixed inset-x-0 bottom-0 top-20 z-50 flex flex-col justify-between overflow-y-auto border-t border-white/10 bg-[#071322] text-white lg:hidden"
+        style={{ paddingBottom: "max(1.5rem, env(safe-area-inset-bottom, 0px))" }}
       >
         <nav aria-label="Mobil menü" className="container-x py-6">
           <ul className="space-y-1">
@@ -151,7 +154,7 @@ export default function Header() {
                 <div className="flex items-center">
                   <Link
                     href={item.href}
-                    className={`flex-1 py-4 text-lg font-semibold ${
+                    className={`flex-1 py-3.5 text-base font-semibold ${
                       isActive(item.href) ? "text-copper-400" : "text-white"
                     }`}
                     aria-current={isActive(item.href) ? "page" : undefined}
@@ -168,7 +171,7 @@ export default function Header() {
                       aria-label={`${item.label} alt menüsünü ${
                         openGroup === item.href ? "kapat" : "aç"
                       }`}
-                      className="grid size-11 place-items-center rounded-xl text-copper-400"
+                      className="grid size-11 place-items-center rounded-xl text-copper-400 active:bg-white/10"
                     >
                       <svg
                         width="14"
@@ -192,7 +195,7 @@ export default function Header() {
                       <li key={c.href}>
                         <Link
                           href={c.href}
-                          className="block py-2.5 text-base font-medium text-white/75 hover:text-white"
+                          className="block py-2 text-sm font-medium text-white/75 hover:text-white"
                         >
                           {c.label}
                         </Link>
@@ -203,6 +206,21 @@ export default function Header() {
               </li>
             ))}
           </ul>
+
+          {/* Mobil Menü İçi Hızlı İletişim & Nöbetçi Ekip */}
+          <div className="mt-8 space-y-3 pt-4">
+            <p className="text-xs font-bold tracking-wider text-copper-400 uppercase">
+              7/24 Kesintisiz Destek &amp; Mobil Ekip
+            </p>
+            <div className="grid gap-2.5">
+              <PhoneButton size="md" label={`Hemen Ara: ${site.phoneDisplay}`} className="w-full text-center" />
+              <WhatsAppButton size="md" onDark label="WhatsApp'tan Konum / Fotoğraf Gönder" className="w-full text-center" />
+            </div>
+            <div className="flex items-center justify-between pt-4 text-[0.7rem] text-white/50 border-t border-white/10">
+              <span>İstanbul Geneli 7/24 Ulaşım</span>
+              <span className="text-emerald-400 font-semibold">● Nöbetçi Ekip Aktif</span>
+            </div>
+          </div>
         </nav>
       </div>
     </>

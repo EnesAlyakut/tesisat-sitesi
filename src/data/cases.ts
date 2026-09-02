@@ -38,7 +38,7 @@ export const caseStudies: CaseStudy[] = [
     result: "Sistem 8 bar test basıncına tabi tutularak sızdırmazlık onaylandı ve seramik alanı kapatılarak ev sahibine teslim edildi.",
     equipment: ["termal-kamera", "akustik-dinleme", "test-pompasi"],
     images: [
-      { src: "/images/services/su-kacagi-tespiti.jpg", alt: "Göktürk termal kamera ile su kaçağı tespiti", width: 1200, height: 800 }
+      { src: "/images/services/su-kacagi-tespiti.webp", alt: "Göktürk termal kamera ile su kaçağı tespiti", width: 1376, height: 768 }
     ],
   },
   {
@@ -53,7 +53,7 @@ export const caseStudies: CaseStudy[] = [
     result: "İşlem sonrası kamera ile tüm hat görüntülendi, pimaşın %100 açık olduğu raporlandı ve koku önleyici çekvalf kontrolü yapıldı.",
     equipment: ["robot-spiral", "boru-kamerasi"],
     images: [
-      { src: "/images/services/tikaniklik-acma.jpg", alt: "Arnavutköy robotla pimaş tıkanıklığı açma", width: 1200, height: 800 }
+      { src: "/images/services/tikaniklik-acma.webp", alt: "Arnavutköy robotla pimaş tıkanıklığı açma", width: 1376, height: 768 }
     ],
   },
   {
@@ -68,7 +68,7 @@ export const caseStudies: CaseStudy[] = [
     result: "Sayaç dönüşü durdu, basınç 4.5 barda sabitlendi ve su sızıntısı tamamen giderildi.",
     equipment: ["akustik-dinleme", "test-pompasi"],
     images: [
-      { src: "/images/services/kamerali-gider-goruntuleme.jpg", alt: "Kemerburgaz akustik dinleme cihazıyla kaçak tespiti", width: 1200, height: 800 }
+      { src: "/images/services/kamerali-gider-goruntuleme.webp", alt: "Kemerburgaz akustik dinleme cihazıyla kaçak tespiti", width: 1376, height: 768 }
     ],
   },
   {
@@ -83,7 +83,7 @@ export const caseStudies: CaseStudy[] = [
     result: "Kamera ile kontrol edilerek suyun akış debisi test edildi, sorun kalıcı olarak çözüldü.",
     equipment: ["boru-kamerasi", "robot-spiral"],
     images: [
-      { src: "/images/services/su-tesisati-tamiri.jpg", alt: "Başakşehir kameralı gider görüntüleme çalışması", width: 1200, height: 800 }
+      { src: "/images/services/su-tesisati-tamiri.webp", alt: "Başakşehir kameralı gider görüntüleme çalışması", width: 1376, height: 768 }
     ],
   },
 ];

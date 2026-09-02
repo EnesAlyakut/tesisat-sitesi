@@ -38,7 +38,7 @@ const sections: LegalSection[] = [
   {
     heading: "5. İletişim",
     paragraphs: [
-      `Kullanım koşulları ile ilgili sorularınız için ${site.contact.email || "info@marsakteknik.com"} veya ${site.contact.phoneDisplay} üzerinden bize ulaşabilirsiniz.`,
+      `Kullanım koşulları ile ilgili sorularınız için ${site.contact.email || "info@marsaktesisat.com"} veya ${site.contact.phoneDisplay} üzerinden bize ulaşabilirsiniz.`,
     ],
   },
 ];

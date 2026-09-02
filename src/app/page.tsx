@@ -10,6 +10,7 @@ import ServiceAreas from "@/components/sections/ServiceAreas";
 import CasesSection from "@/components/sections/CasesSection";
 import PricingSection from "@/components/sections/PricingSection";
 import ContactCta from "@/components/sections/ContactCta";
+import VideoShowcase from "@/components/sections/VideoShowcase";
 
 import Section from "@/components/ui/Section";
 import Reveal from "@/components/ui/Reveal";
@@ -21,11 +22,12 @@ import { getCmsContent } from "@/lib/cms";
 
 export async function generateMetadata(): Promise<Metadata> {
   const cms = await getCmsContent();
-  return {
-    ...buildMetadata({ title: cms.seo.homeTitle, description: cms.seo.homeDescription, path: "/" }),
-    alternates: { canonical: cms.seo.canonicalUrl },
-    robots: cms.seo.indexSite ? { index: true, follow: true } : { index: false, follow: false },
-  };
+  return buildMetadata({
+    title: cms.seo.homeTitle,
+    description: cms.seo.homeDescription,
+    path: "/",
+    noindex: !cms.seo.indexSite,
+  });
 }
 
 export default async function HomePage() {
@@ -43,7 +45,10 @@ export default async function HomePage() {
       {/* 2 — Guven gostergeleri */}
       {visible.trust && cms.trustItems.length > 0 && <TrustStrip items={cms.trustItems} />}
 
-      {/* 3 — Ana hizmetler */}
+      {/* 3 — Sahadan otomatik oynatilan videolar */}
+      <VideoShowcase />
+
+      {/* 4 — Ana hizmetler */}
       {visible.services && <Section
         id="hizmetler"
         eyebrow="Hizmetlerimiz"

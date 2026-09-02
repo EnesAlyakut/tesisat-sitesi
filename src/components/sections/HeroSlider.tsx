@@ -14,7 +14,7 @@ export default function HeroSlider({ slides }: { slides: CmsHeroSlide[] }) {
 
   const show = useCallback((index: number) => {
     setActive((index + slides.length) % slides.length);
-  }, []);
+  }, [slides.length]);
 
   useEffect(() => {
     if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -26,7 +26,7 @@ export default function HeroSlider({ slides }: { slides: CmsHeroSlide[] }) {
     }, AUTOPLAY_MS);
 
     return () => window.clearInterval(timer);
-  }, [paused]);
+  }, [paused, slides.length]);
 
   return (
     <section

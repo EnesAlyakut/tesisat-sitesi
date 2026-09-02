@@ -18,7 +18,7 @@ export const site = {
     "İstanbul genelinde tüm ilçe ve mahallelere 7/24 profesyonel su tesisatı, kırmadan su kaçağı tespiti, robotla tıkanıklık açma ve kameralı gider görüntüleme hizmetleri.",
 
   /** Yayina almadan once kendi domaininizle degistirin. */
-  url: "https://www.marsakteknik.com",
+  url: "https://www.marsaktesisat.com",
 
   contact: {
     phoneDisplay: "0536 463 82 84",

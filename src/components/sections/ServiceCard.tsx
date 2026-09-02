@@ -5,19 +5,19 @@ import ServiceIcon from "@/components/icons/ServiceIcon";
 import { serviceHref } from "@/lib/nav";
 
 const serviceImageMap: Record<string, string> = {
-  "su-kacagi-tespiti": "/images/services/su-kacagi-tespiti.jpg",
-  "tikaniklik-acma": "/images/services/tikaniklik-acma.jpg",
-  "kamerali-gider-goruntuleme": "/images/services/kamerali-gider-goruntuleme.jpg",
-  "su-tesisati-tamiri": "/images/services/su-tesisati-tamiri.jpg",
-  "banyo-mutfak-tesisati": "/images/services/banyo-mutfak-tesisati.jpg",
-  "acil-tesisatci": "/images/services/acil-tesisatci.jpg",
-  "kirmadan-su-kacagi-tespiti": "/images/services/su-kacagi-tespiti.jpg",
-  "robotla-tikaniklik-acma": "/images/services/tikaniklik-acma.jpg",
-  "pimas-gider-yikama": "/images/services/kamerali-gider-goruntuleme.jpg",
-  "temiz-ve-pis-su-tesisati": "/images/services/su-tesisati-tamiri.jpg",
-  "klozet-rezervuar-tamiri": "/images/services/banyo-mutfak-tesisati.jpg",
-  "musluk-batarya-degisimi": "/images/services/banyo-mutfak-tesisati.jpg",
-  "petek-temizligi": "/images/services/su-tesisati-tamiri.jpg",
+  "su-kacagi-tespiti": "/images/services/su-kacagi-tespiti.webp",
+  "tikaniklik-acma": "/images/services/tikaniklik-acma.webp",
+  "kamerali-gider-goruntuleme": "/images/services/kamerali-gider-goruntuleme.webp",
+  "su-tesisati-tamiri": "/images/services/su-tesisati-tamiri.webp",
+  "banyo-mutfak-tesisati": "/images/services/banyo-mutfak-tesisati.webp",
+  "acil-tesisatci": "/images/services/acil-tesisatci.webp",
+  "kirmadan-su-kacagi-tespiti": "/images/services/su-kacagi-tespiti.webp",
+  "robotla-tikaniklik-acma": "/images/services/tikaniklik-acma.webp",
+  "pimas-gider-yikama": "/images/services/kamerali-gider-goruntuleme.webp",
+  "temiz-ve-pis-su-tesisati": "/images/services/su-tesisati-tamiri.webp",
+  "klozet-rezervuar-tamiri": "/images/services/banyo-mutfak-tesisati.webp",
+  "musluk-batarya-degisimi": "/images/services/banyo-mutfak-tesisati.webp",
+  "petek-temizligi": "/images/services/su-tesisati-tamiri.webp",
 };
 
 /**
@@ -25,7 +25,7 @@ const serviceImageMap: Record<string, string> = {
  * Hover durumunda görsel yakınlaşır, ikon ve yönlendirme butonu canlanır.
  */
 export default function ServiceCard({ service }: { service: Service }) {
-  const imageSrc = serviceImageMap[service.slug] || "/images/services/su-kacagi-tespiti.jpg";
+  const imageSrc = serviceImageMap[service.slug] || "/images/services/su-kacagi-tespiti.webp";
 
   return (
     <Link

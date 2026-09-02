@@ -15,7 +15,7 @@ import { getDistrict, locationPages } from "@/data/regions";
 import { getService } from "@/data/services";
 import { getEquipment } from "@/data/equipment";
 import { buildMetadata, crumbs } from "@/lib/seo";
-import { breadcrumbSchema, graph } from "@/lib/schema";
+import { articleSchema, breadcrumbSchema, graph } from "@/lib/schema";
 import { caseHref, locationHref, serviceHref } from "@/lib/nav";
 
 export const dynamicParams = false;
@@ -71,7 +71,19 @@ export default async function CaseDetailPage({
 
   return (
     <>
-      <JsonLd data={graph(breadcrumbSchema(trail))} />
+      <JsonLd
+        data={graph(
+          breadcrumbSchema(trail),
+          articleSchema({
+            title: item.title,
+            description: `${item.problem} ${item.result}`.slice(0, 155),
+            path: caseHref(item.slug),
+            published: item.date,
+            modified: item.date,
+            image: item.images[0]?.src,
+          }),
+        )}
+      />
 
       <PageHero
         crumbs={trail}

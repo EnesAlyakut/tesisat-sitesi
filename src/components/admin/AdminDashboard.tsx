@@ -503,7 +503,7 @@ function SiteEditor({ content, updateSite }: { content: CmsContent; updateSite: 
 
 /* HERO SLAYT EDİTÖRÜ */
 function HeroEditor({ content, setContent, updateSlide, upload, move }: { content: CmsContent; setContent: React.Dispatch<React.SetStateAction<CmsContent>>; updateSlide: (i:number,k:keyof CmsHeroSlide,v:string)=>void; upload:(i:number,e:ChangeEvent<HTMLInputElement>)=>void; move:<T>(a:T[],i:number,d:-1|1)=>T[] }) {
-  const add = () => setContent((c)=>({...c,heroSlides:[...c.heroSlides,{image:"/images/hero/kacak-tespiti.png",alt:"",eyebrow:"Yeni Hizmet",title:"Yeni Slayt Başlığı",body:"Slayt açıklamasını buraya yazın.",href:"/hizmetler/",cta:"Hizmeti İncele"}]}));
+  const add = () => setContent((c)=>({...c,heroSlides:[...c.heroSlides,{image:"/images/hero/kacak-tespiti.webp",alt:"",eyebrow:"Yeni Hizmet",title:"Yeni Slayt Başlığı",body:"Slayt açıklamasını buraya yazın.",href:"/hizmetler/",cta:"Hizmeti İncele"}]}));
   return (
     <div className="space-y-6">
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">

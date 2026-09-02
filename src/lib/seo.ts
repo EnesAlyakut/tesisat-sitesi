@@ -32,22 +32,33 @@ export function buildMetadata({
   noindex,
 }: BuildMetaArgs): Metadata {
   const url = absoluteUrl(path);
+  const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
   // Gorsel verilmezse Next.js dosya konvansiyonu (opengraph-image) devreye girer.
   const og = image
     ? { images: [{ url: image, width: 1200, height: 630, alt: title }] }
     : {};
 
   return {
-    title,
+    // Mutlak baslik, kok layout'taki sablonun markayi ikinci kez eklemesini onler.
+    title: { absolute: fullTitle },
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: { "tr-TR": url },
+    },
     robots: noindex
       ? { index: false, follow: false }
-      : { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+      : {
+          index: true,
+          follow: true,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+          "max-video-preview": -1,
+        },
     openGraph: {
       type,
       url,
-      title,
+      title: fullTitle,
       description,
       siteName: site.name,
       locale: "tr_TR",
@@ -57,7 +68,7 @@ export function buildMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: fullTitle,
       description,
       ...(image ? { images: [image] } : {}),
     },

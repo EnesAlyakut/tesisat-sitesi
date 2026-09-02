@@ -14,7 +14,7 @@
   },
   "heroSlides": [
     {
-      "image": "/images/hero/kacak-tespiti.png",
+      "image": "/images/hero/kacak-tespiti.webp",
       "alt": "Termal kamerayla duvarda su kaçağı arayan tesisat ustası",
       "eyebrow": "Cihazla Noktasal Tespit",
       "title": "Su Kaçağını Kırmadan Tespit Edelim",
@@ -23,7 +23,7 @@
       "cta": "Kaçak Tespiti Hizmeti"
     },
     {
-      "image": "/images/hero/robotla-tikaniklik.png",
+      "image": "/images/hero/robotla-tikaniklik.webp",
       "alt": "Robot spiral cihazıyla gider tıkanıklığı açan tesisat ustası",
       "eyebrow": "Profesyonel Cihazlarla Müdahale",
       "title": "Zorlu Tıkanıklıkları Robotla Açalım",
@@ -32,7 +32,7 @@
       "cta": "Tıkanıklık Açma Hizmeti"
     },
     {
-      "image": "/images/hero/tesisat-onarimi.png",
+      "image": "/images/hero/tesisat-onarimi.webp",
       "alt": "Mutfak evyesi altında tesisat bağlantısını onaran tesisat ustası",
       "eyebrow": "Temiz ve Kontrollü İşçilik",
       "title": "Tesisat Sorununu Doğru Noktada Çözelim",
@@ -100,7 +100,7 @@
   "seo": {
     "homeTitle": "Marsak Teknik Tesisat | İstanbul 7/24 Su Tesisatçısı",
     "homeDescription": "İstanbul genelinde tüm ilçe ve mahallelere su kaçağı tespiti, kırmadan kaçak tespiti, robotla tıkanıklık açma ve kameralı gider görüntüleme. 7/24 acil tesisat hizmeti.",
-    "canonicalUrl": "https://www.marsakteknik.com",
+    "canonicalUrl": "https://www.marsaktesisat.com",
     "indexSite": true
   },
   "updatedAt": "2026-08-25T12:17:11.354Z"

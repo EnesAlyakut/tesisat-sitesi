@@ -137,7 +137,7 @@ export default function Footer() {
         {/* 4. Alt Telif & Bilgi Şeridi */}
         <div className="mt-16 flex flex-col gap-4 border-t border-white/[0.08] pt-8 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © 2026 <strong className="font-bold text-white">Marsak Teknik Tesisat</strong>. Tüm hakları saklıdır.
+            © 2026 Telif Hakkı <strong className="font-bold text-white">©Lizart Dijital</strong> Saklıdır.
           </p>
           <p className="text-white/70">
             İstanbul Geneli Profesyonel Sıhhi Tesisat, Kırmadan Kaçak Tespiti &amp; Robotla Tıkanıklık Açma Servisi.

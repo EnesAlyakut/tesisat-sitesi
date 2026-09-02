@@ -6,9 +6,9 @@ import { caseStudies } from "@/data/cases";
 
 export const dynamic = "force-static";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+const CONTENT_UPDATED_AT = new Date("2026-08-31T00:00:00+03:00");
 
+export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = ([
     { url: absoluteUrl("/"), changeFrequency: "weekly", priority: 1 },
     { url: absoluteUrl("/hizmetler/"), changeFrequency: "monthly", priority: 0.9 },
@@ -18,15 +18,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/musteri-yorumlari/"), changeFrequency: "monthly", priority: 0.5 },
     { url: absoluteUrl("/iletisim/"), changeFrequency: "yearly", priority: 0.8 },
     { url: absoluteUrl("/kvkk/"), changeFrequency: "yearly", priority: 0.2 },
-    { url: absoluteUrl("/kvkk-aydinlatma-metni/"), changeFrequency: "yearly", priority: 0.2 },
     { url: absoluteUrl("/gizlilik-politikasi/"), changeFrequency: "yearly", priority: 0.2 },
     { url: absoluteUrl("/cerez-politikasi/"), changeFrequency: "yearly", priority: 0.2 },
     { url: absoluteUrl("/kullanim-kosullari/"), changeFrequency: "yearly", priority: 0.2 },
-  ] as const).map((p) => ({ ...p, lastModified: now }));
+  ] as const).map((p) => ({ ...p, lastModified: CONTENT_UPDATED_AT }));
 
   const servicePages: MetadataRoute.Sitemap = services.map((s) => ({
     url: absoluteUrl(`/hizmetler/${s.slug}/`),
-    lastModified: now,
+    lastModified: CONTENT_UPDATED_AT,
     changeFrequency: "monthly",
     priority: 0.85,
   }));
@@ -34,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   /* Bolge sayfalari yerel SEO icin en yuksek onceliklidir. */
   const regionPages: MetadataRoute.Sitemap = locationPages.map((p) => ({
     url: absoluteUrl(`/${p.slug}/`),
-    lastModified: now,
+    lastModified: CONTENT_UPDATED_AT,
     changeFrequency: "monthly",
     priority: p.isHub ? 0.95 : 0.9,
   }));

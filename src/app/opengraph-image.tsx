@@ -8,7 +8,8 @@ import { site } from "@/lib/site";
  */
 
 export const runtime = "nodejs";
-export const alt = `${site.name} — Göktürk & Arnavutköy Su Tesisatçısı`;
+export const dynamic = "force-static";
+export const alt = `${site.name} — İstanbul 7/24 Su Tesisatçısı`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -74,7 +75,7 @@ export default function OpengraphImage() {
               maxWidth: 940,
             }}
           >
-            Göktürk ve Arnavutköy Su Tesisatçısı
+            İstanbul 7/24 Su Tesisatçısı
           </div>
 
           <div

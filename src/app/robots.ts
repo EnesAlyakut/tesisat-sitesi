@@ -10,7 +10,8 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "*",
         allow: "/",
         // Arama sonucu, admin paneli ve API rotaları indekslenmez.
-        disallow: ["/admin/", "/admin", "/api/", "/_next/"],
+        // _next dosyalari engellenmez; arama motorlari sayfayi CSS/JS ile render edebilmelidir.
+        disallow: ["/admin/", "/admin", "/api/"],
       },
     ],
     sitemap: `${absoluteUrl("/")}sitemap.xml`,

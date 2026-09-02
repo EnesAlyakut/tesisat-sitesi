@@ -18,7 +18,7 @@ export const equipment: Equipment[] = [
   {
     slug: "termal-kamera",
     name: "Termal Kamera",
-    image: "/images/equipment/termal-kamera.png",
+    image: "/images/equipment/termal-kamera.webp",
     purpose:
       "Yüzeydeki sıcaklık farklarını görüntüye dönüştürerek, tesisattan sızan sıcak veya soğuk suyun oluşturduğu izleri görünür kılar.",
     useCase:
@@ -27,7 +27,7 @@ export const equipment: Equipment[] = [
   {
     slug: "akustik-dinleme",
     name: "Akustik Dinleme Cihazı",
-    image: "/images/equipment/akustik-dinleme.png",
+    image: "/images/equipment/akustik-dinleme.webp",
     purpose:
       "Basınçlı borudan sızan suyun çıkardığı sesi yükselterek, kaçağın hangi noktada olduğunu ses şiddeti üzerinden daraltmayı sağlar.",
     useCase:
@@ -36,7 +36,7 @@ export const equipment: Equipment[] = [
   {
     slug: "boru-ici-kamera",
     name: "Boru İçi Kamera",
-    image: "/images/equipment/boru-ici-kamera.png",
+    image: "/images/equipment/boru-ici-kamera.webp",
     purpose:
       "Esnek kablo üzerindeki su geçirmez kamerayla gider hattının içini gerçek zamanlı olarak görüntüler.",
     useCase:
@@ -45,7 +45,7 @@ export const equipment: Equipment[] = [
   {
     slug: "robot-spiral",
     name: "Robot Spiral",
-    image: "/images/equipment/robot-spiral.png",
+    image: "/images/equipment/robot-spiral.webp",
     purpose:
       "Motor gücüyle dönen esnek tel ve uç başlıkları sayesinde hat içindeki sert birikintileri parçalayarak akışı açar.",
     useCase:
@@ -54,7 +54,7 @@ export const equipment: Equipment[] = [
   {
     slug: "basinc-test-pompasi",
     name: "Basınç Test Pompası",
-    image: "/images/equipment/basinc-test-pompasi.png",
+    image: "/images/equipment/basinc-test-pompasi.webp",
     purpose:
       "Tesisat hattını belirli bir basınca çıkararak basıncın sabit kalıp kalmadığını ölçer; hatta kaçak olup olmadığını gösterir.",
     useCase:
@@ -63,7 +63,7 @@ export const equipment: Equipment[] = [
   {
     slug: "nem-olcum",
     name: "Nem Ölçüm Cihazı",
-    image: "/images/equipment/nem-olcum.png",
+    image: "/images/equipment/nem-olcum.webp",
     purpose:
       "Duvar, zemin ve sıva içindeki nem oranını ölçerek ıslak alanın sınırlarını ve yoğunlaştığı bölgeyi belirler.",
     useCase:

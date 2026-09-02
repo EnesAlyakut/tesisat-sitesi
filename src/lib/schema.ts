@@ -179,6 +179,7 @@ export function articleSchema(args: {
   path: string;
   published: string;
   modified: string;
+  image?: string;
 }) {
   return {
     "@type": "Article",
@@ -191,6 +192,7 @@ export function articleSchema(args: {
     author: { "@id": ORG_ID },
     publisher: { "@id": ORG_ID },
     mainEntityOfPage: absoluteUrl(args.path),
+    ...(args.image ? { image: absoluteUrl(args.image) } : {}),
   };
 }
 

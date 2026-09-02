@@ -66,7 +66,7 @@ function normalizeSeo(value: unknown): CmsSeoSettings {
   return {
     homeTitle: text(item.homeTitle, 100),
     homeDescription: text(item.homeDescription, 300),
-    canonicalUrl: /^https:\/\//.test(canonicalUrl) ? canonicalUrl.replace(/\/$/, "") : "https://www.marsakteknik.com",
+    canonicalUrl: /^https:\/\//.test(canonicalUrl) ? canonicalUrl.replace(/\/$/, "") : "https://www.marsaktesisat.com",
     indexSite: item.indexSite !== false,
   };
 }
